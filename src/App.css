@@ -6,6 +6,8 @@
 }
 
 nav {
+  position: absolute;
+  width: 99.1vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,11 +67,11 @@ html, body {
   height:100%;
 }
 
-body {
+/* body {
     background: linear-gradient(-45deg, #052d2f, #044144, #033a3d, #05666c);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
-}
+} */
 
 
 @keyframes gradient {
