@@ -9,13 +9,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 const links = [
   {
   id:"about",
-  text:"About me",
+  text:"Acerca de mi",
   icon:"👤",
-},
-{
-  id:"skills",
-  text:"Tecnologias",
-  icon:"👨‍💻"
 },
 {
   id:"proyects",
@@ -23,8 +18,13 @@ const links = [
   icon:"📰"
 },
 {
+  id:"skills",
+  text:"Tecnologias",
+  icon:"👨‍💻"
+},
+{
   id:"contact",
-  text:"contacto",
+  text:"Contacto",
   icon:"🐱‍💻"
 },
 ]

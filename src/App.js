@@ -12,9 +12,9 @@ function App() {
     <div className={classes.root}>
       <Navbar  />
       <AboutMe id="about" tittle="Acerca de mi" dark={true} />
-      <Proyects id="proyects" tittle="Proyectos" dark={false}/>
-      <Skills id="skills" tittle="Tecnologias" dark={true}/>
-      <Contact id="contact" tittle="Contacto" dark={false}/>
+      <Proyects id="proyects" tittle="Proyectos" dark={true}/>
+      <Skills id="skills" tittle="Tecnologias" dark={false}/>
+      <Contact id="contact" tittle="Contacto" dark={true}/>
     </div>
   );
 }
