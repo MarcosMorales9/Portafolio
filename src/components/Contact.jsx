@@ -1,5 +1,6 @@
 import React from 'react'
 import { makeStyles, Typography } from "@material-ui/core";
+import ContactSection from './ContactSection';
 
 export default function Contact({id,dark,tittle}) {
     const classes = useStyles();
@@ -7,6 +8,7 @@ export default function Contact({id,dark,tittle}) {
     <div className={`${classes.container} ${dark && classes.sectiondark}`}>
       <div className={classes.sectioncontent} id={id}>
         <div className="tittle">{tittle}</div>
+        <ContactSection></ContactSection>
       </div>
     </div>
   )
