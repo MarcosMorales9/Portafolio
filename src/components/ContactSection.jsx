@@ -6,11 +6,10 @@ import ContactForm from './ContactForm';
 import { MdEmail, MdLocalPhone } from 'react-icons/md';
 
 const ContactStyle = styled.div`
-padding: 10rem 0;
 .contactSection__wrapper{
     display: flex;
     gap: 5rem;
-    margin-top: 7rem;
+    margin-top: 1rem;
     justify-content: space-between;
     position: relative;
 }
@@ -20,17 +19,18 @@ padding: 10rem 0;
     width: 2px;
     height: 50%;
     background-color: gray;
-    left: 50%;
+    left: 54%;
     top: 30%;
     transform: translate(-50%, -50%);
 }
 .left{
     width: 100%;
-    max-width: 500px;
+    max-width: 590px;
 }
 .right{
     max-width: 500px;
     width: 100%;
+    border-radius: 12px;
 }
 @media only screen and (max-width:768px) {
     .contactSection__wrapper{
@@ -53,18 +53,21 @@ export default function ContactSection() {
   return (
     <ContactStyle>
         <div className='containerContact'>
-            <SectionTitle heading='Contact' subheading='Get in Touch'></SectionTitle>
+            <SectionTitle heading='Contact'></SectionTitle>
             <div className="contactSection__wrapper">
                 <div className="left">
                     <ContactInfoItem
-                    icon={<MdLocalPhone/>}
+                    icon={<MdLocalPhone size="3rem"/>}
+                   
                     text="451150574793"
                     />
                     <ContactInfoItem
-                    icon={<MdEmail/>}
+                    icon={<MdEmail size="3rem"/>}
+                    
                     text="marcosmorales9892@gmail.com"
                     />
                     <ContactInfoItem
+                    size="3rem"
                     text='Buenos Aires,Moreno'
                     />
                 </div>

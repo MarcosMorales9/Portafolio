@@ -5,6 +5,7 @@ import PText from "./PText"
 
 const ItemStyles = styled.div`
     padding: 2rem;
+    padding-right: 5rem;
   background-color: black;
   display: flex;
   align-items: center;
@@ -21,12 +22,12 @@ const ItemStyles = styled.div`
     border-radius: 50%;
     }
     svg{
-        width: 3.5rem;
+        width:3.5rem;
     }
 `;
 
 export default function ContactInfoItem({
-    icon = <MdPlace></MdPlace>,
+    icon = <MdPlace size="3rem"></MdPlace>,
     text="This is an info"
 }) {
     return (

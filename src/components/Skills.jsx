@@ -38,9 +38,10 @@ export default function Skills({ id, dark, tittle }) {
             </div>
 			</div>
               <div className="contenedorTecnologias2">
+                <div>
                 <DiHtml5 size="5rem" />
                 <h3>HTML5</h3>
-              </div>
+                </div>
               <div>
                 <DiJsBadge size="5rem" />
                 <h3>JavaScript</h3>
@@ -52,6 +53,7 @@ export default function Skills({ id, dark, tittle }) {
               <div>
                 <SiRedux size="5rem" />
                 <h3>Redux</h3>
+              </div>
               </div>
 			 
             </div>

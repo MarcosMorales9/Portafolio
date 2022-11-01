@@ -47,7 +47,7 @@ export default function ContactForm() {
 
 
     return (
-    <div>
+    <>
         <FormStyle>
             <div className="form-group">
                 <label htmlFor="name">Your Name</label>
@@ -93,6 +93,6 @@ export default function ContactForm() {
                 Send
             </button>
         </FormStyle>
-    </div>
+    </>
   )
 }

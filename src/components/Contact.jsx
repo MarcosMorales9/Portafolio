@@ -1,16 +1,13 @@
 import React from 'react'
 import { makeStyles, Typography } from "@material-ui/core";
 import ContactSection from './ContactSection';
-import Map from './Map';
 
 export default function Contact({id,dark,tittle}) {
     const classes = useStyles();
   return (
     <div className={`${classes.container} ${dark && classes.sectiondark}`}>
       <div className={classes.sectioncontent} id={id}>
-        <div className="tittle">{tittle}</div>
         <ContactSection></ContactSection>
-        <Map></Map>
       </div>
     </div>
   )
