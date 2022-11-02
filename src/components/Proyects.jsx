@@ -3,14 +3,35 @@ import "../App.css";
 import "../assets/logo512.png";
 import { makeStyles } from "@material-ui/core";
 
+
+
+
+
 export default function Proyects({ id, dark, tittle }) {
   const classes = useStyles();
+  
+  const arrayProyects =[
+    {
+      "name": "Mytinerary"
+    },
+    {
+      "name":"MytineraryMobile"
+    },
+    {
+      "name":"Amazing Events"
+    },
+    {
+      "name":"My Industrial Home"
+    }
+  ]
+  
   return (
     <>
       <div className={classes.sectioncontent} id={id}>
         <div className={`${classes.container} ${dark && classes.sectiondark}`}>
           <div>{tittle}</div>
           
+    {arrayProyects.map((e) =>
           <div class="card">
           <div src="" class="card-img"> </div>
           <ul class="social-media">
@@ -78,11 +99,12 @@ c-128 126 -152 140 -212 123 -16 -5 -54 -32 -83 -61 -29 -28 -54 -50 -56 -47
     </svg></li>
   </ul>
   <div class="card-info">
-    <p class="title">Person</p>
+    <p class="title">{e.name}</p>
     <p class="subtitle">Web Dev</p>
   </div>
 </div>
 
+)}
         </div>
       </div>
     </>
