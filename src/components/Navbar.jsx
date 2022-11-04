@@ -1,38 +1,39 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Proyects from './Proyects'
 import perrito from "../assets/perrito.jpg"
-import { AppBar, List, Toolbar, IconButton } from '@material-ui/core'
+import { AppBar, List, Toolbar, IconButton,Drawer, Divider, ListItem, ListItemIcon } from '@material-ui/core'
 import {makeStyles} from "@material-ui/core"
 import {Link, animateScroll as scroll} from "react-scroll"
 import MenuIcon from '@mui/icons-material/Menu';
-
+import CancelIcon from '@mui/icons-material/Cancel';
+import AppBlockingIcon from '@mui/icons-material/AppBlocking';
 const links = [
   {
   id:"about",
   text:"Acerca de mi",
-  icon:"👤",
+  icon:<AppBlockingIcon fontSize='large'/>,
 },
 {
   id:"proyects",
   text:"Mis proyectos",
-  icon:"📰"
+  icon:<AppBlockingIcon fontSize='large'/>
 },
 {
   id:"skills",
   text:"Tecnologias",
-  icon:"👨‍💻"
+  icon:<AppBlockingIcon fontSize='large'/>
 },
 {
   id:"contact",
   text:"Contacto",
-  icon:"🐱‍💻"
+  icon:<AppBlockingIcon fontSize='large'/>
 },
 ]
 
 
 export default function Navbar() {
   const classes = useStyles();
-
+  const [open,setOpen] = useState(false)
   return (
     <>
     <AppBar position='sticky' className={classes.root}>
@@ -51,11 +52,42 @@ export default function Navbar() {
               ))
             }
         </List>
-        <IconButton className={classes.menubutton}>
-        <MenuIcon/>
+        <IconButton
+        className={classes.menubutton}
+        onClick={()=>setOpen(!open)}
+        >
+        
+        <MenuIcon fontSize='large'/>
         </IconButton>
       </Toolbar>
     </AppBar>
+    <Drawer anchor='right' open={open} onClose={()=>setOpen(false)}>
+            <IconButton onClick={()=>setOpen(false)}>
+              <CancelIcon fontSize='large'/>
+            </IconButton>
+            <Divider/> 
+            {
+              links.map(({id,text,icon}, index)=>(
+                <Link key={index} 
+                className={classes.sidebar}
+                to={id}
+                spy={true}
+                smooth={true}
+                activeClass="active"
+                duration={500}
+                offset={-70} >
+                 <ListItem component="h5">
+                  <span>
+                    <ListItemIcon>
+                          {icon}
+                    </ListItemIcon>
+                  </span>
+                  {text}
+                 </ListItem>
+                </Link>
+              ))
+            }
+            </Drawer>
     </>
       
   )
@@ -100,10 +132,20 @@ const useStyles = makeStyles((theme)=> ({
     display:"none",
     [theme.breakpoints.down("sm")]:{
       display:"block",
-      color:"tomate",
+      color:"green",
       position:"absolute",
       top:0,
       right:10,
+    }
+  },
+  sidebar:{
+    width:"40vw",
+    [theme.breakpoints.down("sm")]:{
+      width:"60vw",
+    },
+    "& h5":{
+      margin: theme.spacing(10,0,0,4),
+      fontSize:"1.4rem"
     }
   }
 }))
