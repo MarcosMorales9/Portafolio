@@ -63,7 +63,7 @@ export default function Navbar() {
     </AppBar>
     <Drawer anchor='right' open={open} onClose={()=>setOpen(false)}>
             <IconButton onClick={()=>setOpen(false)}>
-              <CancelIcon fontSize='large'/>
+              <CancelIcon fontSize='large' className={classes.cancelicon}/>
             </IconButton>
             <Divider/> 
             {
@@ -138,6 +138,12 @@ const useStyles = makeStyles((theme)=> ({
       right:10,
     }
   },
+  cancelicon:{
+    color:"tomato",
+    position:"absolute",
+    top:0,
+    right:10,
+  },
   sidebar:{
     width:"40vw",
     [theme.breakpoints.down("sm")]:{
@@ -145,7 +151,14 @@ const useStyles = makeStyles((theme)=> ({
     },
     "& h5":{
       margin: theme.spacing(10,0,0,4),
-      fontSize:"1.4rem"
+      fontSize:"1.4rem",
+      color:"#333",
+      fontWeight:"bold"
+
+    },
+    "& h5:hover":{
+      color:"tomato",
+      cursor:"pointer"
     }
   }
 }))

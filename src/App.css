@@ -80,11 +80,21 @@ video{
 
 
 
-
+.containerCards{
+  margin-top: 8rem;
+    display: flex;
+    flex-direction: row;
+    width: 98vw;
+    height: 100vh;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
 .card {
-  margin-top: 5rem;
-  width: 40vw;
-  height: 254px;
+  margin: 3rem;
+  width: 37vw;
+  height: 30vh;
   background: #f5f5f5;
   position: relative;
   box-shadow: 0px 2px 5px rgba(35,35,35,0.3);
@@ -100,11 +110,11 @@ video{
  }
  
  /*Image*/
+ 
  .card-img {
   /* background: #00ff88;
   background: linear-gradient(to top, #00ff88 0%, #61efff 100%); */
-  background-image: url("https://media.discordapp.net/attachments/821196906814111765/1007108594006765658/unknown.png?width=1335&height=676");
-  background-size: 40vw;
+  /* background-size: 40vw; */
   background-position: top;
   height: 100%;
   width: 100%;
