@@ -204,6 +204,15 @@ video{
     padding: 0px;
 }
 .contenedorTecnologiasTodo{
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 74vh;
+}
+.contenedorTecnologias{
+  display: flex;
+  justify-content: space-around;
+  width: 50vw;
 }
  

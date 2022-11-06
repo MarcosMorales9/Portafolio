@@ -19,7 +19,7 @@ export default function Skills({ id, dark, tittle }) {
       <div className={classes.sectioncontent} id={id}>
         <div className="tecnoTitulo">{tittle}</div>
         <div className="contenedorTecnologiasTodo">
-          <div className="tecnoContenedor">
+          <div className="contenedorTecnologias">
             <div>
               <DiBootstrap size="5rem" />
               <h3>Bootstrap</h3>
@@ -37,7 +37,7 @@ export default function Skills({ id, dark, tittle }) {
               <h3>React</h3>
             </div>
 			</div>
-              <div className="contenedorTecnologias2">
+              <div className="contenedorTecnologias">
                 <div>
                 <DiHtml5 size="5rem" />
                 <h3>HTML5</h3>
