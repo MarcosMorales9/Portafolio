@@ -1,7 +1,6 @@
 import React from 'react'
 import {MdPlace} from "react-icons/md"
 import styled from 'styled-components'
-import PText from "./PText"
 
 const ItemStyles = styled.div`
     padding: 2rem;
@@ -34,7 +33,7 @@ export default function ContactInfoItem({
    <ItemStyles>
         <div className="icon">{icon}</div>
         <div className="info">
-            <PText>{text}</PText>
+            <p>{text}</p>
         </div>
    </ItemStyles>
   )

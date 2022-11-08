@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import Proyects from './Proyects'
 import perrito from "../assets/perrito.jpg"
 import { AppBar, List, Toolbar, IconButton,Drawer, Divider, ListItem, ListItemIcon } from '@material-ui/core'
 import {makeStyles} from "@material-ui/core"
-import {Link, animateScroll as scroll} from "react-scroll"
+import {Link} from "react-scroll"
 import MenuIcon from '@mui/icons-material/Menu';
 import CancelIcon from '@mui/icons-material/Cancel';
 import AppBlockingIcon from '@mui/icons-material/AppBlocking';

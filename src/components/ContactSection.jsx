@@ -1,5 +1,4 @@
 import React from 'react'
-import SectionTitle from './SectionTittle'
 import styled from "styled-components"
 import ContactInfoItem from './ContactInfoItem';
 import ContactForm from './ContactForm';
@@ -53,7 +52,7 @@ export default function ContactSection() {
   return (
     <ContactStyle>
         <div className='containerContact'>
-            <SectionTitle heading='Contact'></SectionTitle>
+            <h2>Contact</h2>
             <div className="contactSection__wrapper">
                 <div className="left">
                     <ContactInfoItem

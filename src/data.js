@@ -10,7 +10,7 @@ export const projects =[
     {
         id:2,
         title: "MyTinerary",
-        description: "MERN",
+        description: "Node,Mongo,Express,React,Redux",
         image:"https://media.discordapp.net/attachments/821196906814111765/1009467212689588384/unknown.png?width=1328&height=676",
         page: "https://mytinerary-morales-front.herokuapp.com",
         codegit:"https://github.com/MarcosMorales9/MyTinerary-Morales"
@@ -18,7 +18,7 @@ export const projects =[
     {
         id:3,
         title: "Amazing Events",
-        description: "HTML,CSS,JAVASCRIPT",
+        description: "HTML,CSS,JavaScript,Bootstrap",
         image:"https://media.discordapp.net/attachments/821196906814111765/1009468098342039672/unknown.png?width=1324&height=676",
         page: "https://marcosmorales9.github.io/AmazingEvents",
         codegit:"https://github.com/MarcosMorales9/AmazingEvents"
@@ -30,5 +30,12 @@ export const projects =[
         image:"https://media.discordapp.net/attachments/821196906814111765/1009468098342039672/unknown.png?width=1324&height=676",
         page: "https://github.com/MarcosMorales9/myTinerary",
         codegit:"https://github.com/MarcosMorales9/AmazingEvents"
+    },
+    {   
+        id:5,
+        title: "Mindy",
+        description: "JavaScript,HTML,CSS",
+        image: "https://cdn.discordapp.com/attachments/821196906814111765/1038271310482124921/image.png",
+      
     },
 ]
