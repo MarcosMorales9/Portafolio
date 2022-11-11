@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
+import {Link} from "react-scroll"
 
 const ColStyles = styled.div`
     .heading{
@@ -19,14 +19,16 @@ export default function FooterCol({
   heading = "col heading",
   links = [
     {
-      type: "Link",
-      title: "Home",
-      path: "/home",
+      id:"About",
+      text:"Acerca de mi",
+      path:"/",
+      type:""
     },
     {
-      type: "Links",
-      title: "About",
-      path: "/about",
+      id:"Proyects",
+      text:"Mis proyectos",
+      path:"/",
+      type:""
     },
   ],
 }) {
@@ -34,17 +36,22 @@ export default function FooterCol({
     <ColStyles>
       <h1 className="heading">{heading}</h1>
       <ul>
-        {links.map((item, index) => {
+        {links.map((item, index) => (
           <li key={index}>
             {item.type === "Link" ? (
-              <Link to={item.path}>{item.title}</Link>
+              <Link
+              spy={true}
+              smooth={true}
+              activeClass="active"
+              duration={500}
+              offset={-70} to={item.id}>{item.text}</Link>
             ) : (
-              <a href={item.path} target="_blank" rel="noreferrer">
-                {item.title}
+              <a to href={item.path} target="_blank" rel="noreferrer">
+                {item.text}
               </a>
             )}
-          </li>;
-        })}
+          </li>
+        ))}
       </ul>
     </ColStyles>
   );

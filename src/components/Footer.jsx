@@ -8,22 +8,18 @@ const FooterStyles = styled.div`
   .container{
     display: flex;
     gap: 3rem;
-
+    height: 5vh;
   }
   .footer__col1{
     flex: 2;
   }
-  .footer__col2{
-
-  }
-  .footer__col3{
-
-  }
+  .footer__col2,
+  .footer__col3,
   .footer__col4{
     flex: 1;
   }
   .footer__col1_tittle{
-    font-size: 3.5rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
   }
   .copyright{
@@ -64,35 +60,33 @@ export default function Footer() {
       <div className="container">
         <div className="footer__col1">
           <h1 className="footer__col1_tittle">Marcos Morales</h1>
-          <h3>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem
-            sed quo necessitatibus animi soluta, hic nulla reprehenderit quis,
-            unde consequatur itaque eos esse reiciendis magni? Doloribus neque
-            voluptatum reiciendis fugiat!
-          </h3>
         </div>
         <div className="footer__col2">
           <FooterCol
             heading="Important Links"
             links={[
               {
-                title:"Home",
+                text:"Home",
+                id:"about",
                 path:"/",
                 type:"Link"
               },
               {
-                title:"Projects",
-                path:"/projects",
+                id:"proyects",
+                text:"Mis proyectos",
+                path:"/",
                 type:"Link"
               },
               {
-                title:"Tecnologias",
-                path:"/tecnologias",
+                id:"skills",
+                text:"Tecnologias",
+                path:"/",
                 type:"Link"
               },
               {
-                title:"Contact",
-                path:"/contact",
+                id:"contact",
+                text:"Contact",
+                path:"/",
                 type:"Link"
               },
             ]
@@ -104,15 +98,15 @@ export default function Footer() {
           heading="Contact Info"
           links={[
             {
-            title:"54 9(11) 5057-4793",
+            text:"54 9(11) 5057-4793",
             path:"tel:+54 9(11) 5057-4793"
           },
           {
-            title:"marcosmorales9892@gmail.com",
+            text:"marcosmorales9892@gmail.com",
             path:"mailto:marcosmorales9892@gmail.com"
           },
           {
-            title:"Buenos Aires, Argentina",
+            text:"Buenos Aires, Argentina",
             path:"http://google.com/maps"
           },
         
@@ -123,11 +117,11 @@ export default function Footer() {
           <FooterCol
           heading="Social Links"
           links={[{
-            title:"Linkedin",
+            text:"Linkedin",
             path:"https://www.linkedin.com/in/marcos-morales-130469224/"
           },
           {
-            title:"Github",
+            text:"Github",
             path:"https://github.com/MarcosMorales9"
           },
         ]}
